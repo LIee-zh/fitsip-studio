@@ -48,7 +48,7 @@
     @media (prefers-reduced-motion:reduce){.nav-links a{transition:none;}}
 
     /* ---------- views ---------- */
-    .view{display:none;}
+    .view{display:none;scroll-margin-top:72px;}
     .view.active{display:block;animation:viewIn .2s ease-out;}
     @keyframes viewIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
     @media (prefers-reduced-motion:reduce){.view.active{animation:none;}}
@@ -363,7 +363,7 @@
       box-shadow:0 10px 26px rgba(13,36,30,.16);}
     .side-rail-head{display:flex;align-items:baseline;justify-content:space-between;gap:6px;padding:0 2px 8px;margin-bottom:9px;
       border-bottom:1px solid rgba(18,48,40,.10);}
-    .side-rail-head span{font-size:9.5px;letter-spacing:.4px;color:var(--muted);font-weight:800;line-height:1.2;}
+    .side-rail-head span{font-size:10px;letter-spacing:.4px;color:var(--muted);font-weight:800;line-height:1.2;}
     .side-count{font-size:10px;font-weight:800;color:var(--orange);white-space:nowrap;}
     .side-list{position:relative;display:flex;flex-direction:column;gap:1px;}
     .side-list::before{content:"";position:absolute;left:9px;top:9px;bottom:9px;width:1px;background:rgba(18,48,40,.18);}
@@ -384,8 +384,8 @@
     }
     @media (max-width:767px){
       .side-rail{width:100px;padding:10px 7px 11px;}
-      .side-label{font-size:9.5px;}
-      .side-rail-head span{font-size:8.5px;letter-spacing:.2px;}
+      .side-label{font-size:10px;}
+      .side-rail-head span{font-size:10px;letter-spacing:.1px;}
       .side-count{font-size:9px;}
       .wrap{padding-left:124px;}
     }
@@ -399,7 +399,7 @@
   <a class="skip-link" href="#view-home" data-i18n="skip_to_main">Skip to main content</a>
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="#home">Fit <span>&amp;</span> Sip</a>
+      <a class="brand" href="#view-home">Fit <span>&amp;</span> Sip</a>
       <div style="display:flex;gap:10px;align-items:center;">
         <div class="lang-switch" id="langSwitch">
           <button type="button" data-lang="en">EN</button>
@@ -411,13 +411,13 @@
         <button class="burger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
       </div>
       <nav class="nav-links" id="navLinks">
-        <a href="#home" data-view="home" data-i18n="nav_home">Home</a>
-        <a href="#classes" data-view="classes" data-i18n="nav_classes">Classes &amp; Caf&eacute;</a>
-        <a href="#membership" data-view="membership" data-i18n="nav_membership">Membership</a>
-        <a href="#about" data-view="about" data-i18n="nav_about">About</a>
-        <a href="#contact" data-view="contact" data-i18n="nav_contact">Contact</a>
-        <a href="#contact" class="cta" data-view="contact" data-i18n="nav_trial">Book a trial</a>
-        <a href="#" class="exit-link" id="navExit" data-i18n="exit_nav">Exit</a>
+        <a href="#view-home" data-view="home" data-i18n="nav_home">Home</a>
+        <a href="#view-classes" data-view="classes" data-i18n="nav_classes">Classes &amp; Caf&eacute;</a>
+        <a href="#view-membership" data-view="membership" data-i18n="nav_membership">Membership</a>
+        <a href="#view-about" data-view="about" data-i18n="nav_about">About</a>
+        <a href="#view-contact" data-view="contact" data-i18n="nav_contact">Contact</a>
+        <a href="#view-contact" class="cta" data-view="contact" data-i18n="nav_trial">Book a trial</a>
+        <a href="#view-home" class="exit-link" id="navExit" data-i18n="exit_nav">Exit</a>
       </nav>
     </div>
   </header>
@@ -426,11 +426,11 @@
   <aside class="side-rail" id="sideRail">
     <div class="side-rail-head"><span data-i18n="side_here">You are here</span><span class="side-count" id="sideCount">1/5</span></div>
     <div class="side-list" id="sideList">
-        <a class="side-item" href="#home" data-view="home"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_home">Home</span></a>
-        <a class="side-item" href="#classes" data-view="classes"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_classes">Classes &amp; Caf&eacute;</span></a>
-        <a class="side-item" href="#membership" data-view="membership"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_membership">Membership</span></a>
-        <a class="side-item" href="#about" data-view="about"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_about">About</span></a>
-        <a class="side-item" href="#contact" data-view="contact"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_contact">Contact</span></a>
+        <a class="side-item" href="#view-home" data-view="home"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_home">Home</span></a>
+        <a class="side-item" href="#view-classes" data-view="classes"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_classes">Classes &amp; Caf&eacute;</span></a>
+        <a class="side-item" href="#view-membership" data-view="membership"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_membership">Membership</span></a>
+        <a class="side-item" href="#view-about" data-view="about"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_about">About</span></a>
+        <a class="side-item" href="#view-contact" data-view="contact"><span class="side-dot" aria-hidden="true"></span><span class="side-label" data-i18n="nav_contact">Contact</span></a>
     </div>
   </aside>
 
@@ -492,8 +492,8 @@
           <h1 id="home-title" data-i18n="hero_title">Train hard, sip clean.</h1>
           <p data-i18n="hero_sub">Book a class, grab a smoothie, stay for the people. One studio where the workout and the drink after it belong together.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact" data-view="contact" data-i18n="cta_join">Join a trial class</a>
-            <a class="btn btn-ghost" href="#classes" data-view="classes" data-i18n="cta_classes">See classes &amp; drinks</a>
+            <a class="btn btn-primary" href="#view-contact" data-view="contact" data-i18n="cta_join">Join a trial class</a>
+            <a class="btn btn-ghost" href="#view-classes" data-view="classes" data-i18n="cta_classes">See classes &amp; drinks</a>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -506,21 +506,21 @@
       <div class="wrap">
         <h2 data-i18n="do_title">What we do</h2>
         <div class="grid do-grid">
-          <a class="card do-card" href="#classes" data-view="classes" data-target="group">
+          <a class="card do-card" href="#view-classes" data-view="classes" data-target="group">
             <div class="imgbox">
               <img src="assets/strength_class.jpg" alt="Small group strength class: members training with dumbbells in the studio">
             </div>
             <h3 data-i18n="train_title">Group training</h3>
             <p data-i18n="train_sub">Small classes for strength, cycle and mobility. Coaches keep every session personal.</p>
           </a>
-          <a class="card do-card" href="#classes" data-view="classes" data-target="cafe">
+          <a class="card do-card" href="#view-classes" data-view="classes" data-target="cafe">
             <div class="imgbox">
               <img src="assets/green_smoothie.jpg" alt="Fresh green smoothie with spinach and banana, served on a linen napkin">
             </div>
             <h3 data-i18n="cafe_title">Healthy caf&eacute;</h3>
             <p data-i18n="cafe_sub">Smoothies, protein bowls and cold drinks made with whole ingredients, no added sugar.</p>
           </a>
-          <a class="card do-card" href="#classes" data-view="classes" data-target="pt">
+          <a class="card do-card" href="#view-classes" data-view="classes" data-target="pt">
             <div class="imgbox">
               <img src="assets/pt_strength.jpg" alt="Coach guiding a client through a one-to-one dumbbell session">
             </div>
@@ -568,7 +568,7 @@
             <p data-i18n="glance_d3s">Everything in Monthly, plus a monthly guest pass, locker and member events.</p>
           </div>
         </div>
-        <p style="margin-top:14px;"><a href="#membership" data-view="membership" style="color:var(--orange);font-weight:600;" data-i18n="see_plans">See full membership plans →</a></p>
+        <p style="margin-top:14px;"><a href="#view-membership" data-view="membership" style="color:var(--orange);font-weight:600;" data-i18n="see_plans">See full membership plans →</a></p>
       </div>
     </section>
 
@@ -577,7 +577,7 @@
         <div class="cta-band">
           <h2 data-i18n="cta_band_title">Try your first session</h2>
           <p data-i18n="cta_band_sub">No contract to look around. Book one class and see how the studio works.</p>
-          <a class="btn" href="#contact" data-view="contact" data-i18n="cta_band_btn">Book a free trial</a>
+          <a class="btn" href="#view-contact" data-view="contact" data-i18n="cta_band_btn">Book a free trial</a>
         </div>
       </div>
     </section>
@@ -592,7 +592,7 @@
         <p data-i18n="classes_sub">Pick a session, then choose what to drink after it.</p>
       </div>
 
-      <a class="btn btn-ghost do-back" href="#home" data-view="home" data-i18n="back_home">← Back to home</a>
+      <a class="btn btn-ghost do-back" href="#view-home" data-view="home" data-i18n="back_home">← Back to home</a>
       <h2 class="menu-title" data-i18n="classes_group">Group classes</h2>
       <div class="class-grid" id="classGrid"></div>
 
@@ -601,7 +601,7 @@
 
       <div class="menu-row">
         <h2 class="menu-title" data-i18n="classes_cafe">Caf&eacute; menu</h2>
-        <a class="btn btn-ghost" href="#home" data-view="home" data-i18n="back_home">← Back to home</a>
+        <a class="btn btn-ghost" href="#view-home" data-view="home" data-i18n="back_home">← Back to home</a>
       </div>
       <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories"></div>
       <div class="menu-grid" id="menuGrid"></div>
@@ -610,7 +610,7 @@
       <div class="cta-band">
         <h2 data-i18n="classes_cta_t">Ready to book?</h2>
         <p data-i18n="classes_cta_s">First trial class is free for new visitors.</p>
-        <a class="btn" href="#contact" data-view="contact" data-i18n="classes_cta_b">Book your first class</a>
+        <a class="btn" href="#view-contact" data-view="contact" data-i18n="classes_cta_b">Book your first class</a>
       </div>
     </div>
   </section>
@@ -633,7 +633,7 @@
             <li data-i18n="p1_l2">No café discount</li>
             <li data-i18n="p1_l3">Pay per visit, no commitment</li>
           </ul>
-          <a class="btn btn-ghost" href="#contact" data-view="contact" data-i18n="p1_btn">Book a class</a>
+          <a class="btn btn-ghost" href="#view-contact" data-view="contact" data-i18n="p1_btn">Book a class</a>
         </div>
 
         <div class="plan featured">
@@ -645,7 +645,7 @@
             <li data-i18n="p2_l3">Priority booking 24 hours ahead</li>
             <li data-i18n="p2_l4">Member-only time slots</li>
           </ul>
-          <a class="btn btn-primary" href="#contact" data-view="contact" data-i18n="p2_btn">Join Monthly</a>
+          <a class="btn btn-primary" href="#view-contact" data-view="contact" data-i18n="p2_btn">Join Monthly</a>
         </div>
 
         <div class="plan">
@@ -657,7 +657,7 @@
             <li data-i18n="p3_l3">Personal locker through the year</li>
             <li data-i18n="p3_l4">Invitations to member events</li>
           </ul>
-          <a class="btn btn-ghost" href="#contact" data-view="contact" data-i18n="p3_btn">Choose Annual</a>
+          <a class="btn btn-ghost" href="#view-contact" data-view="contact" data-i18n="p3_btn">Choose Annual</a>
         </div>
       </div>
 
@@ -822,7 +822,7 @@
   <!-- ===== View: Food detail ===== -->
   <section class="view" id="view-detail">
     <div class="wrap">
-      <a class="back-top" id="detail-back-top" href="#classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
+      <a class="back-top" id="detail-back-top" href="#view-classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
       <div class="detail-card">
         <img id="detail-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
         <div class="detail-body">
@@ -842,7 +842,7 @@
           </div>
           <div class="detail-sec"><p id="detail-note"></p></div>
           <p class="menu-note" data-i18n="menu_disclaimer">Images are for reference only; the actual product shall prevail.</p>
-          <a class="btn btn-ghost detail-back" id="detail-back" href="#classes" data-i18n="d_back">Back to menu</a>
+          <a class="btn btn-ghost detail-back" id="detail-back" href="#view-classes" data-i18n="d_back">Back to menu</a>
         </div>
       </div>
     </div>
@@ -851,7 +851,7 @@
   <!-- ===== View: Class detail ===== -->
   <section class="view" id="view-cdetail">
     <div class="wrap">
-      <a class="back-top" id="cd-back-top" href="#classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
+      <a class="back-top" id="cd-back-top" href="#view-classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
       <div class="cd-grid">
         <div class="cd-main">
           <img id="cd-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
@@ -867,8 +867,8 @@
               <ul class="block-list" id="cd-blocks"></ul>
             </div>
             <div class="cd-actions">
-              <a class="btn btn-primary" id="cd-book" href="#contact" data-view="contact" data-i18n="cd_book">Book this session</a>
-              <a class="btn btn-ghost" id="cd-back" href="#classes" data-i18n="cd_back">Back to classes</a>
+              <a class="btn btn-primary" id="cd-book" href="#view-contact" data-view="contact" data-i18n="cd_book">Book this session</a>
+              <a class="btn btn-ghost" id="cd-back" href="#view-classes" data-i18n="cd_back">Back to classes</a>
             </div>
           </div>
         </div>
@@ -883,7 +883,7 @@
 </main>
 
   <footer>
-    <div class="wrap">Fit &amp; Sip Studio, Chengdu &middot; <span data-i18n="footer_hours">Open Mon&ndash;Fri 06:30&ndash;21:00, Sat&ndash;Sun 09:00&ndash;17:00</span> &middot; <a href="mailto:lieeoe_zzhzz@163.com" style="color:var(--light);">lieeoe_zzhzz@163.com</a> &middot; <a href="#" id="footExit" style="color:var(--light);text-decoration:underline;" data-i18n="nav_exit">Exit site</a></div>
+    <div class="wrap">Fit &amp; Sip Studio, Chengdu &middot; <span data-i18n="footer_hours">Open Mon&ndash;Fri 06:30&ndash;21:00, Sat&ndash;Sun 09:00&ndash;17:00</span> &middot; <a href="mailto:lieeoe_zzhzz@163.com" style="color:var(--light);">lieeoe_zzhzz@163.com</a> &middot; <a href="#view-home" id="footExit" style="color:var(--light);text-decoration:underline;" data-i18n="nav_exit">Exit site</a></div>
   </footer>
 
   <div id="toast" role="status" aria-live="polite"></div>
@@ -1596,7 +1596,7 @@
         e.preventDefault();
         var name = el.getAttribute('data-view');
         var target = el.getAttribute('data-target');
-        history.replaceState(null, '', '#' + name);
+        history.replaceState(null, '', '#view-' + name);
         showView(name);
         if(el.closest('.nav-links')){
           document.querySelectorAll('.nav-links a.nav-hit').forEach(function(x){ x.classList.remove('nav-hit'); });
@@ -1612,6 +1612,7 @@
     });
     function routeFromHash(){
       var h = location.hash.replace('#','');
+      if(h.indexOf('view-') === 0){ h = h.slice(5); }
       if(h === 'detail'){ h = 'classes'; }
       showView(h);
     }
@@ -2103,7 +2104,7 @@
       var c = list[i]; if(!c){ return; }
       currentClassIndex = i; currentClassFrom = from;
       fillClassDetail(c);
-      history.replaceState(null, '', '#cdetail');
+      history.replaceState(null, '', '#view-cdetail');
       showView('cdetail');
     }
 
@@ -2161,7 +2162,7 @@
       document.getElementById('detail-ing').innerHTML = (f.ing[currentLang] || f.ing.en).map(function(x){ return '<li>' + x + '</li>'; }).join('');
       document.getElementById('detail-allergen').innerHTML = (f.allergens[currentLang] || f.allergens.en).map(function(x){ return '<span class="allergen">' + x + '</span>'; }).join('');
       document.getElementById('detail-note').textContent = f.note[currentLang] || f.note.en;
-      history.replaceState(null, '', '#detail');
+      history.replaceState(null, '', '#view-detail');
       showView('detail');
     }
 
@@ -2198,7 +2199,7 @@
     });
     document.getElementById('cd-back').addEventListener('click', function(e){
       e.preventDefault();
-      history.replaceState(null, '', '#classes');
+      history.replaceState(null, '', '#view-classes');
       showView('classes', true);
     });
     document.getElementById('cd-book').addEventListener('click', function(){
@@ -2209,17 +2210,17 @@
     });
     document.getElementById('detail-back').addEventListener('click', function(e){
       e.preventDefault();
-      history.replaceState(null, '', '#classes');
+      history.replaceState(null, '', '#view-classes');
       showView('classes', true);
     });
     document.getElementById('cd-back-top').addEventListener('click', function(e){
       e.preventDefault();
-      history.replaceState(null, '', '#classes');
+      history.replaceState(null, '', '#view-classes');
       showView('classes', true);
     });
     document.getElementById('detail-back-top').addEventListener('click', function(e){
       e.preventDefault();
-      history.replaceState(null, '', '#classes');
+      history.replaceState(null, '', '#view-classes');
       showView('classes', true);
     });
 
