@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://miaoda.feishu.cn">
   <link rel="preconnect" href="https://sf3-scmcdn-cn.feishucdn.com" crossorigin>
   <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Nunito:wght@400;600;700;800&amp;display=swap">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23123028'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='700' fill='%23F7F4ED' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23123028'/%3E%3Ctext%20x='16'%20y='22'%20font-family='Arial'%20font-size='17'%20font-weight='700'%20fill='%23F7F4ED'%20text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
   <style>
     :root{
       --green:#123028; --green-deep:#0D241E; --cream:#F7F4ED; --orange:#BC4C27;
@@ -483,7 +483,8 @@
   </div>
 
   <!-- ===== View: Home ===== -->
-  <main class="view active" id="view-home" aria-labelledby="home-title">
+  <main id="main-content">
+<section class="view active" id="view-home" aria-labelledby="home-title">
     <div class="hero">
       <div class="wrap">
         <div>
@@ -580,10 +581,10 @@
         </div>
       </div>
     </section>
-  </main>
+  </section>
 
   <!-- ===== View: Classes & Café ===== -->
-  <main class="view" id="view-classes" aria-labelledby="classes-title">
+  <section class="view" id="view-classes" aria-labelledby="classes-title">
     <div class="wrap">
       <div class="page-head">
         <div class="eyebrow" data-i18n="classes_eyebrow">Browse the studio</div>
@@ -612,10 +613,10 @@
         <a class="btn" href="#contact" data-view="contact" data-i18n="classes_cta_b">Book your first class</a>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- ===== View: Membership ===== -->
-  <main class="view" id="view-membership" aria-labelledby="mb-title">
+  <section class="view" id="view-membership" aria-labelledby="mb-title">
     <div class="wrap">
       <div class="page-head">
         <div class="eyebrow" data-i18n="mb_eyebrow">Choose your plan</div>
@@ -680,10 +681,10 @@
         Plans renew monthly or yearly and can be cancelled before the next billing date. Student and first-trial offers are shown at booking. Prices are in Chinese yuan (CNY) and include local taxes.
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- ===== View: About ===== -->
-  <main class="view" id="view-about" aria-labelledby="ab-title">
+  <section class="view" id="view-about" aria-labelledby="ab-title">
     <div class="wrap">
       <div class="page-head">
         <div class="eyebrow" data-i18n="ab_eyebrow">Who we are</div>
@@ -729,10 +730,10 @@
         </ul>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- ===== View: Contact ===== -->
-  <main class="view" id="view-contact" aria-labelledby="ct-title">
+  <section class="view" id="view-contact" aria-labelledby="ct-title">
     <div class="wrap">
       <div class="page-head">
         <div class="eyebrow" data-i18n="ct_eyebrow">Get in touch</div>
@@ -816,14 +817,14 @@
 
       <div class="note" data-i18n="ct_note">Submitting writes your request straight into the studio database, so the coaches see it the same day. Someone replies by e-mail within one working day. You can check the status below.</div>
     </div>
-  </main>
+  </section>
 
   <!-- ===== View: Food detail ===== -->
-  <main class="view" id="view-detail">
+  <section class="view" id="view-detail">
     <div class="wrap">
       <a class="back-top" id="detail-back-top" href="#classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
       <div class="detail-card">
-        <img id="detail-img" src="" alt="">
+        <img id="detail-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
         <div class="detail-body">
           <div class="detail-top"><span class="detail-name" id="detail-name"></span><span class="detail-price" id="detail-price"></span></div>
           <div class="detail-meta" id="detail-meta"></div>
@@ -845,15 +846,15 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
 
   <!-- ===== View: Class detail ===== -->
-  <main class="view" id="view-cdetail">
+  <section class="view" id="view-cdetail">
     <div class="wrap">
       <a class="back-top" id="cd-back-top" href="#classes"><span class="arrow">←</span><span data-i18n="back_top">Back</span></a>
       <div class="cd-grid">
         <div class="cd-main">
-          <img id="cd-img" src="" alt="">
+          <img id="cd-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="">
           <div class="cd-body">
             <div class="cd-top"><span class="cd-name" id="cd-name"></span><span class="cd-level" id="cd-level"></span></div>
             <div class="cd-meta" id="cd-meta"></div>
@@ -878,7 +879,8 @@
         </aside>
       </div>
     </div>
-  </main>
+  </section>
+</main>
 
   <footer>
     <div class="wrap">Fit &amp; Sip Studio, Chengdu &middot; <span data-i18n="footer_hours">Open Mon&ndash;Fri 06:30&ndash;21:00, Sat&ndash;Sun 09:00&ndash;17:00</span> &middot; <a href="mailto:lieeoe_zzhzz@163.com" style="color:var(--light);">lieeoe_zzhzz@163.com</a> &middot; <a href="#" id="footExit" style="color:var(--light);text-decoration:underline;" data-i18n="nav_exit">Exit site</a></div>
